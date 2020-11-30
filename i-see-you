@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# Regards, the Alveare Solutions society.
+#
+CONF_FILE_PATH="./conf/i-see-you.conf"
+
+if [ -f "$CONF_FILE_PATH" ]; then
+    source $CONF_FILE_PATH
+else
+    echo "[ WARNING ]: System failure! Settings file $CONF_FILE_PATH not found."
+    exit 1
+fi
+
+./scripts/i-see-you.sh "$CONF_FILE_PATH"
